@@ -33,6 +33,7 @@ We thought sudo systemctl reload nginx might not be picking up changes, leading 
 We explored whether Nginx was serving an outdated or incorrect file by using curl to verify the contents served by Nginx.
 
 ## What It Actually Ended Up Being
+
 The permissions on the /root directory were too restrictive. Nginx (running as the www-data user) could not access the frontend/build directory because it couldn't traverse the /root directory.
 Fixing this required granting execute (+x) permissions to /root and /root/news_agg/frontend.
 
