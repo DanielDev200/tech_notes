@@ -4,8 +4,6 @@ Messing with Nginix was DIFFICULT. TLDR is that web apps cannot be served from /
 
 Here is the summary of what went wrong:
 
-## Summary of the Issue
-
 ### What the Issue Was
 
 The root cause of the issue was file permission problems on the frontend/build directory. Nginx was unable to serve the index.html file because the permissions did not allow the Nginx user (www-data) to read the files. Despite updating permissions with chmod and chown, the issue persisted because the parent directories leading to the build folder (/root and /root/news_agg/frontend) also lacked appropriate permissions.
