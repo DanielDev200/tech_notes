@@ -1,6 +1,6 @@
 # NGINIX
 
-Messing with Nginix was DIFFICULT. TLDR is that web apps cannot be served from /root. Instead use /var/www
+Messing with Nginix was DIFFICULT. TLDR is that web apps cannot be served from /root. Instead use /var/www and create that path if it doesn't exist.
 
 Here is the summary of what went wrong:
 
